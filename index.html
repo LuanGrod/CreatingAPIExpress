@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .buscaUnica {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+    }
+
+    #lista {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <title>Consumindo API própria</title>
+</head>
+
+<body>
+  <section class="buscaUnica">
+    <fieldset>
+      <legend>Buscar por ID</legend>
+      <label for="">ID: </label>
+      <input type="number" name="id" id="id">
+      <button id="buscaPorId">Buscar</button>
+      <div id="lista"></div>
+    </fieldset>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
