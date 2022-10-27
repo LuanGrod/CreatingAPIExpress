@@ -6,10 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .buscaUnica {
+    .container {
       display: flex;
       justify-content: center;
       margin: auto;
+    }
+
+    #titulo, #url {
+      margin-top: 10px;
     }
 
     #lista {
@@ -19,17 +23,31 @@
       justify-content: center;
     }
   </style>
-  <title>Consumindo API própria</title>
+  <title>Express Server</title>
 </head>
 
 <body>
-  <section class="buscaUnica">
+  <section class="container">
     <fieldset>
       <legend>Buscar por ID</legend>
-      <label for="">ID: </label>
-      <input type="number" name="id" id="id">
+      <label for="getID">ID: </label>
+      <input type="number" name="getID" id="getID" required>
       <button id="buscaPorId">Buscar</button>
-      <div id="lista"></div>
+      <div id="getPoster"></div>
+    </fieldset>
+  </section>
+
+  <section class="container">
+    <fieldset>
+      <legend>Publicar nova série</legend>
+      <label for="postID">ID: </label>
+      <input type="number" name="postID" id="postID" required><br>
+      <label for="postTitulo">Título: </label>
+      <input type="text" name="postTitulo" id="postTitulo" required><br>
+      <label for="postURL">Poster(URL): </label>
+      <input type="text" name="postURL" id="postURL" required><br>
+      <button id="publicarSerie">Publicar</button>
+      <div id="postResposta"></div>
     </fieldset>
   </section>
 
